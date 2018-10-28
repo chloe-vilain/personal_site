@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PersonalSite</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div id="header">
+      <%= render 'layouts/header' %>
+    </div>
+    <div id="page_body">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
