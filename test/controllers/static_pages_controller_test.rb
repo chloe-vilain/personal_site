@@ -18,6 +18,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "#{@base_title}"
   end
 
+  test "should get Home" do
+    get home_path
+    assert_response :success
+    assert_select "title", "#{@base_title}"
+  end
+
   test "should get Portfolio" do
     get portfolio_path
     assert_response :success
