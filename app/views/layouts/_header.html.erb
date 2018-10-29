@@ -1,13 +1,23 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <nav>
-      <ul class="nav navbar-nav navbar-left">
-        <li class="nav-item"><%= link_to "Home", root_path %></li>
+<header>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top sticky-top">
+    <a class="accent-style" href='/home'>Chloe Web Design</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item"><%= link_to "Portfolio", portfolio_path %></li>
         <li class="nav-item"><%= link_to "About", about_path%></li>
         <li class="nav-item"><%= link_to "Pricing", pricing_path %></li>
         <li class="nav-item"><%= link_to "Contact", contact_path %></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
