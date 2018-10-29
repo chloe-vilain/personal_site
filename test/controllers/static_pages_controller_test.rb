@@ -6,8 +6,14 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     @base_title = "Chloe Vilain"
   end
 
-  test "should get Home" do
+  test "shoult get route" do
     get root_path
+    assert_response :success
+    assert_select "title", "#{@base_title}"
+  end
+  
+  test "should get Home" do
+    get home_path
     assert_response :success
     assert_select "title", "#{@base_title}"
   end
