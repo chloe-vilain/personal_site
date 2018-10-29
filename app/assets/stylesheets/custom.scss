@@ -1,1 +1,66 @@
 @import "bootstrap";
+
+$link-color:#240e3a;
+$link-color-visited:#261e2f;
+$link-color-hover:#542187;
+$link-color-active:#421a6b;
+$hover-color: black;
+/*Layout*/
+body {
+  padding-top: 4em;
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align:justify;
+}
+
+nav {
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav-item {
+  background-color: white;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: 1rem;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+#home-link-header {
+  font-size: 2rem;
+}
+
+/*Typography*/
+body {
+
+}
+
+.nav-item{
+  a {
+    text-decoration: none;
+    color: $link-color;
+    &:visited {
+      color: $link-color-visited;
+    }
+    &:hover{
+      color: $link-color-hover;
+    }
+    &:focus {
+      color: $link-color-hover;
+    }
+    &:active {
+      color: $link-color-active;
+    }
+  }
+}
+
+#home-link-header {
+  font-family: 'Cinzel Decorative', cursive;
+}

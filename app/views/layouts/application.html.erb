@@ -6,13 +6,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
   </head>
   <body>
     <div id="header">
       <%= render 'layouts/header' %>
     </div>
-    <div id="page_body">
-      <%= yield %>
+    <div class="container" id="page-body">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <%= yield %>
+        </div>
+      </div>
     </div>
     <div id="footer">
       <%= render 'layouts/footer' %>
