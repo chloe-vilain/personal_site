@@ -25,8 +25,8 @@ $sm:576px;
 body {
   padding-top: 4.2em;
   font-size: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align:left;
 }
 
@@ -179,8 +179,22 @@ nav {
   }
 }
 
+#about-web-bg {
+  background-color: $highlight-color-teal;
+}
+
+#about-art-bg {
+  background-color: $highlight-color-peach;
+}
+
+#about-pm-bg {
+  background-color: $highlight-color-purple;
+}
+
 /*Typography*/
 
 #home-link-header {
       font-family: 'Cousine', monospace;
 }
+
+/*misc*/
