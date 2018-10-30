@@ -1,30 +1,39 @@
 @import "bootstrap";
 
-$link-color:#240e3a;
+/*colors*/
+$link-color: black;
 $link-color-visited:#261e2f;
-$link-color-hover:#542187;
+$link-color-hover: white;
 $link-color-active:#421a6b;
-$hover-color: black;
+
+$body-color-light:white;
+$body-color-medium: #9e95a7;
+$body-color-dark: black;
+
+$highlight-color-purple:#e87bf9;
+$highlight-color-teal:#0bd6e5;
+$highlight-color-peach:#f9907b;
+$highlight-color-green:#0be53a;
+
+/*screen breakpoints (min size)*/
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
 /*Layout*/
 body {
-  padding-top: 4em;
+  padding-top: 4.2em;
   font-size: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  text-align:justify;
+  text-align:left;
 }
 
 nav {
   background-color: white;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
-}
-
-.nav-item {
-  background-color: white;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  font-size: 1rem;
 }
 
 .navbar {
@@ -32,35 +41,146 @@ nav {
   padding-bottom: 0;
 }
 
+.nav-item {
+  background-color: white;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
 
 #home-link-header {
   font-size: 2rem;
+  padding-left: 2em;
 }
 
-/*Typography*/
+@media only screen and (min-width: $sm) {
+   .nav-item {
+     padding-left: 1rem;
+     padding-right: 1rem;
+     font-size: 1.1rem;
+   }
+}
+
+@media only screen and (min-width: $md) {
+   .nav-item {
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+     font-size: 1.3rem;
+   }
+   #home-link-header {
+     font-size: 2.5rem;
+     padding-left: 2em;
+   }
+   body {
+     padding-top: 4.7em;
+   }
+}
+
+@media only screen and (min-width: $lg) {
+   .nav-item {
+     padding-left: 2rem;
+     padding-right: 2rem;
+     font-size: 1.5rem;
+   }
+   #home-link-header {
+     font-size: 3rem;
+     padding-left: 2em;
+   }
+   body {
+     padding-top: 5.2em;
+   }
+}
+
+@media only screen and (min-width: $xl) {
+   .nav-item {
+     padding-left: 2.5rem;
+     padding-right: 2.5rem;
+     font-size: 1.7rem;
+   }
+   #home-link-header {
+     font-size: 3.5rem;
+     padding-left: 2em;
+   }
+   body {
+     padding-top: 5.7em;
+   }
+}
+
+/*Colors*/
 body {
-
+  background-color: $body-color-light;
 }
 
-.nav-item{
-  a {
-    text-decoration: none;
-    color: $link-color;
-    &:visited {
-      color: $link-color-visited;
-    }
-    &:hover{
-      color: $link-color-hover;
-    }
-    &:focus {
-      color: $link-color-hover;
-    }
-    &:active {
-      color: $link-color-active;
-    }
+nav {
+  background-color: $body-color-light;
+}
+
+#nav-portfolio {
+  &:hover {
+    background-color: $highlight-color-purple;
+  }
+  &:focus {
+    background-color: $highlight-color-purple;
+  }
+}
+#nav-about {
+  &:hover {
+    background-color: $highlight-color-teal;
+  }
+  &:focus {
+    background-color: $highlight-color-teal;
   }
 }
 
+#nav-pricing {
+  &:hover {
+    background-color: $highlight-color-peach;
+  }
+  &:focus {
+    background-color: $highlight-color-peach;
+  }
+}
+
+#nav-contact {
+  &:hover {
+    background-color: $highlight-color-green;
+  }
+  &:focus {
+    background-color: $highlight-color-green;
+  }
+}
+
+.nav-item {
+  a{
+    text-decoration: none;
+    color: $link-color;
+  }
+}
+.nav-item:visited {
+  a {
+    color: $link-color;
+  }
+}
+.nav-item:hover {
+  a {
+    color: $link-color-hover;
+  }
+}
+
+.nav-item:focus {
+  a {
+    color: $link-color-hover;
+  }
+}
+
+.nav-item:active {
+  a {
+    color: $link-color-hover;
+    /*font-weight: bold;*/
+  }
+}
+
+/*Typography*/
+
 #home-link-header {
-  font-family: 'Cinzel Decorative', cursive;
+      font-family: 'Cousine', monospace;
 }
