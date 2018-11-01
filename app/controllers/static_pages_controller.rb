@@ -8,9 +8,6 @@ class StaticPagesController < ApplicationController
   def About
   end
 
-  def Pricing
-  end
-
   def Contact
   end
 end

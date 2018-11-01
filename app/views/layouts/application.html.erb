@@ -1,6 +1,7 @@
 <html lang="en">
   <head>
     <title><%= full_title(yield(:title)) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -8,18 +9,14 @@
     <%= render 'layouts/shim' %>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">   </head>
-  <body>
+  <body class="Site">
     <div id="header">
       <%= render 'layouts/header' %>
     </div>
-    <div class="container" id="page-body">
-      <div class="row justify-content-center">
-        <div class="col-md-11">
-          <%= yield %>
-        </div>
-      </div>
+    <div id="page-body" class="Site-content">
+      <%= yield %>
     </div>
-    <div id="footer">
+    <div id="footer" class="fl-page-footer-wrap">
       <%= render 'layouts/footer' %>
     </div>
   </body>

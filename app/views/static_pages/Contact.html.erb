@@ -1,3 +1,71 @@
 <% provide(:title, "Contact") %>
-<p>Paragraph about how we love to hear from you</p>
-<p>Contact form</p>
+<div class="container" id="contact-pg">
+  <h1>Let's work together.</h1>
+  <p>I am currently accepting new contracts. Please use the form on the left to reach out, and
+    I will do my best to respond within 2 business days. </p>
+  <hr>
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md">
+      <p>I am looking for...</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" value="option1" checked>
+          <label class="form-check-label">a new website from scratch</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" value="option1">
+          <label class="form-check-label">new features for my existing website</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" value="option1">
+          <label class="form-check-label"> a re-design my existing website</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" value="option1">
+          <label class="form-check-label">something else</label>
+        </div>
+      </div>
+      <div class="form-group col-md">
+      <p>...for my...</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios1" value="option1" checked>
+          <label class="form-check-label">business or organization.</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios1" value="option1">
+          <label class="form-check-label">upcoming project or event.</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios1" value="option1">
+          <label class="form-check-label">other purposes.</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md">
+        <ul>
+          <li><input class="form-control form-control-lg" type="text" placeholder="Name"></li>
+          <li><input class="form-control form-control-lg" type="email" placeholder="Email"></li>
+          <li><input class="form-control form-control-lg" type="tel" placeholder="Phone number (optional)"></li>
+        </ul>
+      </div>
+      <div class="form-group col-md">
+        <textarea class="form-control form-control-lg"
+                      name="message"
+                      rows="5"
+                      cols="50"
+                      placeholder="Please share a brief description of your project in 250 characters or less."
+                      maxlength="250"></textarea>
+      </div>
+    </div>
+    <div id="submit-button-div">
+      <input class="form-control form-control-lg" type="submit" value="Send">
+    </div>
+
+
+    <div class="form-row">
+      <div class="col-md form-group" id="centerplease">
+      </div>
+    </div>
+  </form>
+</div>

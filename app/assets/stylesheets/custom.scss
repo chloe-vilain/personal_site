@@ -7,7 +7,6 @@ $link-color-hover: white;
 $link-color-active:#421a6b;
 
 $body-color-light:white;
-$body-color-medium: #9e95a7;
 $body-color-dark: black;
 
 $highlight-color-purple:#e87bf9;
@@ -15,30 +14,61 @@ $highlight-color-teal:#0bd6e5;
 $highlight-color-peach:#f9907b;
 $highlight-color-green:#76E765;
 
+$link-peach-visited:#9e6b61;
+$link-purple-active:#f08fff;
+
 /*screen breakpoints (min size)*/
 $xl:1200px;
 $lg:992px;
 $md:768px;
 $sm:576px;
+$toggle-break:400px;
 
 /*Layout*/
-body {
-  padding-top: 4.2em;
-  font-size: 1em;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-align:left;
+html {
+  height: 100%;
 }
 
+body {
+  padding-left:0;
+  padding-right: 0;
+  padding-top: 6em;
+  font-size: 1em;
+  text-align:left;
+  background-color: $body-color-light;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex: 1;
+}
+
+footer{
+  p{
+    margin: 0 auto;
+  }
+  padding: 1rem 1rem 0 0;
+}
+
+/*Navigation*/
 nav {
-  background-color: white;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  background-color: $body-color-light;
 }
 
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .nav-item {
@@ -50,6 +80,7 @@ nav {
 #home-link-header {
   font-size: 2rem;
   padding-left: 2em;
+  padding-right: 1em;
 }
 
 @media only screen and (min-width: $sm) {
@@ -62,13 +93,14 @@ nav {
 
 @media only screen and (min-width: $md) {
    .nav-item {
-     padding-left: 1.5rem;
-     padding-right: 1.5rem;
-     font-size: 1.3rem;
+     padding-left: 2rem;
+     padding-right: 2rem;
+     font-size: 1.5rem;
    }
    #home-link-header {
      font-size: 2.5rem;
      padding-left: 2em;
+     padding-right: .5
    }
    body {
      padding-top: 4.7em;
@@ -77,9 +109,9 @@ nav {
 
 @media only screen and (min-width: $lg) {
    .nav-item {
-     padding-left: 2rem;
-     padding-right: 2rem;
-     font-size: 1.5rem;
+     padding-left: 2.5rem;
+     padding-right: 2.5rem;
+     font-size: 1.8rem;
    }
    #home-link-header {
      font-size: 3rem;
@@ -92,9 +124,9 @@ nav {
 
 @media only screen and (min-width: $xl) {
    .nav-item {
-     padding-left: 2.5rem;
-     padding-right: 2.5rem;
-     font-size: 1.7rem;
+     padding-left: 3rem;
+     padding-right: 3rem;
+     font-size: 2.1rem;
    }
    #home-link-header {
      font-size: 3.5rem;
@@ -104,14 +136,8 @@ nav {
      padding-top: 5.7em;
    }
 }
-
-/*Colors*/
-body {
-  background-color: $body-color-light;
-}
-
-nav {
-  background-color: $body-color-light;
+@media only screen and (max-width: $toggle-break) {
+  padding-top: 9em;
 }
 
 #nav-portfolio {
@@ -122,6 +148,7 @@ nav {
     background-color: $highlight-color-purple;
   }
 }
+
 #nav-about {
   &:hover {
     background-color: $highlight-color-teal;
@@ -131,21 +158,12 @@ nav {
   }
 }
 
-#nav-pricing {
-  &:hover {
-    background-color: $highlight-color-peach;
-  }
-  &:focus {
-    background-color: $highlight-color-peach;
-  }
-}
-
 #nav-contact {
   &:hover {
-    background-color: $highlight-color-green;
+    background-color: $highlight-color-peach;
   }
   &:focus {
-    background-color: $highlight-color-green;
+    background-color: $highlight-color-peach;
   }
 }
 
@@ -179,22 +197,140 @@ nav {
   }
 }
 
-#about-web-bg {
-  background-color: $highlight-color-teal;
-}
+/*imgs*/
 
-#about-art-bg {
-  background-color: $highlight-color-peach;
-}
-
-#about-pm-bg {
-  background-color: $highlight-color-purple;
+#paintbrush-img, #devices-img, #rectagle-home-img {
+  max-width: 600px;
 }
 
 /*Typography*/
 
 #home-link-header {
-      font-family: 'Cousine', monospace;
+    font-family: 'Cousine', monospace;
 }
 
+#page-body {
+  a {
+    color: $highlight-color-peach;
+  }
+  a:visited {
+    color: $link-peach-visited;
+  }
+  a:hover {
+    color: $highlight-color-purple;
+  }
+  a:focus {
+    color: $highlight-color-purple;
+  }
+  a:active {
+    color: $link-purple-active;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+hr {
+  background-color: $body-color-dark;
+  color: $body-color-dark; /*old ie*/
+  height: 2px;
+  border: none;
+}
+
+/*Contact*/
+#contact-pg{
+  p {
+    padding-top: 1em;
+  }
+
+  form {
+    padding-top: 1rem;
+    p {
+      font-size: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        padding-top: .5rem;
+      }
+    }
+    .form-check {
+      font-size: 1rem;
+    }
+    input[type=radio]{
+    }
+    input::placeholder, textarea::placeholder {
+      color:$highlight-color-peach;
+    }
+    input[type=submit] {
+      color:$body-color-light;
+      background-color:$highlight-color-teal;
+      max-width: 10rem;
+      font-weight: bold;
+      &:hover{
+        background-color:$highlight-color-purple;
+      }
+      &:focus{
+        background-color:$highlight-color-purple;
+      }
+      &:active{
+        background-color: $link-purple-active;
+      }
+    }
+
+  }
+}
+#submit-button-div{
+  width:100%;
+  input{
+    margin:0 auto;
+    width: 10rem;
+  }
+}
+/*
+#contact-submit-div {
+  align-items: center !important;
+  margin:0;
+}
+*/
+
+/*home*/
+#purple-homebar {
+  background-color: $highlight-color-purple;
+  padding: 1em;
+}
+#pointers-home {
+  @media only screen and (min-width: $md) {
+    padding-top: 12rem;
+  }
+}
+
+/*portfolio*/
+#portfolio-body {
+  text-align:center;
+  p {
+    margin:0;
+  }
+  h1 {
+    padding: 0;
+  }
+}
+/*footer*/
+footer {
+  /*padding: 1rem;*/
+  text-align: center;
+  align-items: center;
+  background-color: $body-color-dark;
+  color: $body-color-light;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
 /*misc*/
+
+.clearfix {
+    overflow: auto;
+}
