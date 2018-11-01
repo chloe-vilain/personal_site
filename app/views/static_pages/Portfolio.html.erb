@@ -2,7 +2,11 @@
 <div class="container" id="portfolio-body">
       <h1>Coming soon.</h1>
       <p>Thank you for your patience. Please feel free to <%= link_to "contact me", contact_path %> for more samples of my work in the meantime.</p>
-      <%= image_tag("coming-soon-600.png") %>
+      <%= image_set_tag "coming-soon-600.png",
+          {"coming-soon-400.png" => '576w',
+            "coming-soon-600.png" => '768'},
+          alt: "",
+          id: "paintbrush-img" %>
       <!--<img src="/assets/coming-soon-200.png" alt="" id="paintbrush-img"
            srcset="/assets/coming-soon-400.png 576w,
                    /assets/coming-soon-600.png 768w"/>-->

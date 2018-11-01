@@ -11,8 +11,13 @@ module ApplicationHelper
 
   def active_tab_class(*paths)
    active = false
-   paths.each { |path| active ||= current_page?(path) }  
+   paths.each { |path| active ||= current_page?(path) }
    active ? 'active' : ''
  end
+
+  def image_set_tag(source, srcset = {}, options = {})
+    srcset = srcset.map { |src, size| "#{path_to_image(src)} #{size}" }.join(', ')
+    image_tag(source, options.merge(srcset: srcset))
+  end
 
 end
