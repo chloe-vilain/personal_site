@@ -2,9 +2,11 @@
 <div class="container about" id="about-pg">
   <div class="row">
     <div class="col-md order-1" id="about-web-img">
-      <img src="assets/devices-black-200px.png" alt="" id="devices-img"
-           srcset="/assets/devices-black-400px.png 576w,
-                   /assets/devices-black-600px.png 768w"/>
+     <%= image_set_tag "devices-black-200px.png",
+         {"devices-black-400px.png" => '576w',
+           "devices-black-600px.png" => '768'},
+         alt: "multiple-devices-screens",
+         id: "devices-img" %>
     </div>
     <div class="col-lg order-2 about-text" id="about-web-text">
       <h1>Developer</h1>
@@ -22,9 +24,11 @@
   <hr>
   <div class="row">
     <div class="col-lg order-2" id="about-art-img">
-      <img src="/assets/paintbrushes-black-200px.png" alt="" id="paintbrush-img"
-           srcset="/assets/paintbrushes-black-400px.png 576w,
-                   /assets/paintbrushes-black-600px.png 768w"/>
+       <%= image_set_tag "paintbrushes-black-200px.png",
+           {"paintbrushes-black-400px.png" => '576w',
+             "paintbrushes-black-600px.png" => '768'},
+           alt: "paintbrushes",
+           id: "paintbrush-img" %>
     </div>
     <div class="col-lg order-1" id="about-art-text">
       <h1>Artist</h1>

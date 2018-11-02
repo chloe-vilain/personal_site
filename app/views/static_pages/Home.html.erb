@@ -1,9 +1,11 @@
 <div class="container" id="home-pg">
   <div class="row">
     <div class="col-md">
-      <img src="assets/Rectangles-home-200px.png" alt="" id="rectagle-home-img"
-            srcset="/assets/Rectangles-home-400px.png 576w,
-                    /assets/Rectangles-home-600px.png 768w"/>
+      <%= image_set_tag "Rectangles-home-200px.png",
+          {"Rectangles-home-400px.png" => '576w',
+            "Rectangles-home-600px.png" => '768'},
+          alt: "rectangle-decoration",
+          id: "rectangle-home-img" %>
       <p><i>"The internet is becoming the town square for the global village of tomorrow"</i></p>
       <p>-Bill Gates</p>
     </div>
@@ -11,7 +13,7 @@
       <h1>Hi, I'm Chloe.</h1>
       <p>I make interactive websites and applications. Let's get started.</p>
       <div id="pointers-home">
-        <img src="/assets/pointer-50.png" alt=""><img src="/assets/pointer-50.png" alt=""><img src="/assets/pointer-50.png" alt="">
+        <%= image_tag("pointer-50.png", alt:"pointer-decoration") %><%= image_tag("pointer-50.png", alt:"pointer-decoration") %><%= image_tag("pointer-50.png", alt:"pointer-decoration") %>
       </div>
       <div id="purple-homebar">
       </div>
