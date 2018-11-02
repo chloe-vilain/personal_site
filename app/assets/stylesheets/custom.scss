@@ -278,6 +278,10 @@ hr {
     }
     .form-check {
       font-size: 1rem;
+      @media only screen and (max-width: $sm){
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+      }
     }
     input[type=radio]{
     }
