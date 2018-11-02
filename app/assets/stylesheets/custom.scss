@@ -69,6 +69,10 @@ nav {
   padding-bottom: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+  @media only screen and (max-width: $sm) {
+    padding:0;
+  }
+  border-bottom: 2px solid $body-color-dark;
 }
 
 .nav-item {
@@ -77,12 +81,26 @@ nav {
   font-size: 1.1rem;
 }
 
+.navbar-toggler {
+  border: none;
+  color: $body-color-dark;
+  margin-bottom: .2rem;
+}
+
 #home-link-header {
   font-size: 2rem;
   padding-left: 2em;
   padding-right: 1em;
 }
 
+#navbar-content {
+  @media only screen and (max-width: $sm) {
+     .nav-item {
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+     }
+   }
+}
 @media only screen and (min-width: $sm) {
    .nav-item {
      padding-left: 1rem;
@@ -316,7 +334,7 @@ hr {
     margin:0;
   }
   h1 {
-    padding: 0;
+    padding-bottom: 0;
   }
 }
 /*footer*/
